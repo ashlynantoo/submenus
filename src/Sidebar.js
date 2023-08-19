@@ -1,6 +1,5 @@
-import React from "react";
 import { FaTimes } from "react-icons/fa";
-import sublinks from "./data";
+import subLinks from "./data";
 import { useGlobalContext } from "./context";
 
 const Sidebar = () => {
@@ -20,12 +19,12 @@ const Sidebar = () => {
           <FaTimes />
         </button>
         <div className="sidebar-links">
-          {sublinks.map((sublink, index) => {
-            const { page, links } = sublink;
+          {subLinks.map((subLink, index) => {
+            const { page, links } = subLink;
             return (
               <article key={index}>
                 <h4>{page}</h4>
-                <div className="sidebar-sublinks">
+                <div className="sidebar-subLinks">
                   {links.map((link, subIndex) => {
                     const { label, icon, url } = link;
                     return (
